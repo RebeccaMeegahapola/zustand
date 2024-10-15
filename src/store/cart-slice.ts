@@ -17,12 +17,12 @@ type CartActions = {
     reset: () => void;
 };
 
-export type CartSlice = CartState & CartActions;
+export type CartSlice = CartState & CartActions; //combined cart state and actions
 
 const initialState: CartState = {
     products: [],
     total: 0,
-}
+} //The initial state is defined with an empty products array and a total value of 0.
 
 export const createCartSlice: StateCreator<
     CartSlice, 
