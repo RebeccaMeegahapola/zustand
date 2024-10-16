@@ -4,6 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "./components/ui/card"
 import { PRODUCTS_DATA } from "./lib/mockData";
 import { ChangeQtyButtons } from "./components/ChangeQtyButtons";
 import { Cart } from "./components/Cart";
+import { User } from "./components/User";
 
 export default function App() {
 
@@ -12,7 +13,10 @@ export default function App() {
 
   return (
     <main className="space-y-2 dark bg-background max-w-sm mx-auto mt-2 pt-10 pb-10">
-      <Cart />
+      <div className="flex justify-between">
+        <User />
+        <Cart />
+      </div>
       <h1 className="text-2xl">Products:</h1>
       <div className="space-y-2">
         {PRODUCTS_DATA.map((product) => (
