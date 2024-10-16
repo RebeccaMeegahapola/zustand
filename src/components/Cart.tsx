@@ -9,12 +9,13 @@ import { useStore } from "@/store/store";
 
 export function Cart() {
 
-    const { reset, products, removeProduct, total } = useStore(
+    const { reset, products, removeProduct, total, address } = useStore(
         useShallow((state) => ({
             reset: state.reset,
             products: state.products,
             removeProduct: state.removeProduct,
             total: state.total,
+            address: state.address
         }))
     )
 
@@ -53,6 +54,7 @@ export function Cart() {
 					))}
                 </div>
                 <p>Total: {total}$</p>
+                <p>Address: {address}</p>
             </PopoverContent>
         </Popover>
     )
